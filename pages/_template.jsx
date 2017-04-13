@@ -17,9 +17,6 @@ module.exports = React.createClass({
     return (
       <div>
         <div
-          wrapperStyle={{
-            marginBottom: rhythm(1),
-          }}
           style={{
             background: '#252525'
           }}
@@ -44,7 +41,7 @@ module.exports = React.createClass({
                     >
                       <img src={logo} alt="FutureGerald Logo" style={styles.logo}></img>
                     </Link>
-                  <h3 style={styles.netlifyAwesome}>Netlify is Awesome!</h3>
+                  <h3 style={styles.netlifyAwesome}>Netlify is Awesome! =D</h3>
               </div>
           </Container>
         </div>
