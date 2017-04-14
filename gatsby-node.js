@@ -5,9 +5,7 @@ var path = require('path');
 exports.modifyWebpackConfig = function(config, stage) {
   if(stage === 'build-html') {
 
-    config.plugin(
-                  [
-        new CopyWebpackPlugin([
+    config.plugin( new CopyWebpackPlugin([
           
             // {output}/file/without/extension
             {
@@ -23,7 +21,7 @@ exports.modifyWebpackConfig = function(config, stage) {
             // to `true` copies all files.
             copyUnmodified: true
         })
-    ])
+    )
   }
   return config
 }
