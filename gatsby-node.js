@@ -5,9 +5,13 @@ var path = require('path');
 exports.modifyWebpackConfig = function(config, stage) {
   if(stage === 'build-html') {
 
+    config.loader(function(cfg) {
+
+      return cfg
+    })
     config.plugin('copy-redirect',
                   [
-        new CopyWebpackPlugin([
+        CopyWebpackPlugin([
           
             // {output}/file/without/extension
             {
