@@ -2,8 +2,8 @@ import React from 'react'
 import { Container } from 'react-responsive-grid'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
-import Headroom from 'react-headroom'
 import '../css/markdown-styles'
+import logo from '../images/logoWhiteTransparent.png'
 
 import { rhythm } from '../utils/typography'
 
@@ -16,10 +16,7 @@ module.exports = React.createClass({
   render () {
     return (
       <div>
-        <Headroom
-          wrapperStyle={{
-            marginBottom: rhythm(1),
-          }}
+        <div
           style={{
             background: '#252525'
           }}
@@ -28,20 +25,26 @@ module.exports = React.createClass({
             style={{
               maxWidth: 960,
               paddingTop: 0,
-              padding: `${rhythm(1)} ${rhythm(3/4)}`,
+              padding: `${rhythm(1)} ${rhythm(1)}`,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
-            <Link
-              to={prefixLink('/')}
-              style={{
-                color: 'white',
-                textDecoration: 'none',
-              }}
-            >
-              Your Brand!
-            </Link>
+                <div>
+                    <Link
+                      to={prefixLink('/')}
+                      style={{
+                        color: 'white',
+                        textDecoration: 'none',
+                      }}
+                    >
+                      <img src={logo} alt="FutureGerald Logo" style={styles.logo}></img>
+                    </Link>
+                  <h3 style={styles.netlifyAwesome}>Netlify is Awesome! =D</h3>
+              </div>
           </Container>
-        </Headroom>
+        </div>
         <Container
           style={{
             maxWidth: 960,
@@ -55,3 +58,14 @@ module.exports = React.createClass({
     )
   },
 })
+
+const styles = {
+  logo:{
+    width: 500,
+    height: "auto",
+  },
+  netlifyAwesome: {
+    textAlign: "center",
+    color: "white",
+  }
+};
