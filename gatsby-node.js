@@ -1,16 +1,15 @@
 var CopyWebpackPlugin = require('copy-webpack-plugin');
-var path = require('path');
 //var ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 exports.modifyWebpackConfig = function(config, stage) {
   if(stage === 'build-html') {
 
-    config.plugin( new CopyWebpackPlugin([
+    config.plugin(CopyWebpackPlugin([
           
             // {output}/file/without/extension
             {
                 from: 'asset/_redirects',
-                to: 'public/extension',
+                to: 'public/',
                 toType: '_redirects'
             },
             
