@@ -9,7 +9,7 @@ exports.modifyWebpackConfig = function(config, stage) {
             // {output}/file/without/extension
             {
                 from: './_redirects.re',
-                to: 'public/',
+                to: 'public/_redirects',
                 toType: 'file'
             },
             
