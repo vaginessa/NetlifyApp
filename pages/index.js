@@ -8,6 +8,7 @@ class Index extends Component {
   render () {
     return (
       <div>
+      {/* Helmet has the metadata for the index */}
         <Helmet
           title={config.siteTitle}
           meta={[
@@ -29,12 +30,12 @@ class Index extends Component {
         <div className="row">
           <div className="col s12">
             <div className="card-panel blue darken-1">
-              <span className="white-text"><strong>My favorite thing about providing technical support is</strong> the variety. It’s 
+              <p className="white-text"><strong>My favorite thing about providing technical support is</strong> the variety. It’s 
                 difficult to pick only one thing, since I love the challenges, working with different technologies, and working with both technical and non-technical 
                 people. I love being in that intersection between humanity and technology. But in the end the best way to summarize 
                 everything I love about providing technical support is the variety. I get to work with many different types of companies, 
                 people, and technologies. I get to apply my skills in many ways, and the growth potential is almost limitless.
-              </span>
+              </p>
             </div>
           </div>
         </div>
@@ -43,13 +44,13 @@ class Index extends Component {
         <div className="row">
           <div className="col s12">
             <div className="card-panel blue darken-1">
-              <span className="white-text"><strong>I think Netlify is a pretty awesome service.</strong> I’m not just saying that! 
+              <p className="white-text"><strong>I think Netlify is a pretty awesome service.</strong> I’m not just saying that! 
                 Before finding the job listing I never knew it existed. I have only recently begun looking in to learning how to use 
                 Docker, and github deployments. I didn’t know that a service like Netlify automated the process in addition to providing 
                 a CDN. Getting this single page up and running didn’t take long at all, and it’s faster than the hosting I have setup 
                 with digitalocean. One thing I’m curious about is what the bandwidth and storage limits are since it’s not immediately 
                 obvious when looking at the pricing page.
-              </span>
+              </p>
             </div>
           </div>
         </div>
@@ -58,14 +59,15 @@ class Index extends Component {
         <div className="row">
           <div className="col s12">
             <div className="card-panel blue darken-1">
-              <span className="white-text"><strong>The biggest challenge I faced while building this site was using Gatsby. </strong> 
+              <p className="white-text"><strong>The biggest challenge I faced while building this site was using Gatsby. </strong> 
                 While I have experience using React to build full web apps, and I’m currently learning React Native, I have never used 
                 Gatsby before this project. Luckily building React components is familiar to me, but much was changed since Gatsby uses 
                 templates, does not give direct access to React Router, and uses a different directory structure with some new files. 
                 It also has a different ways of setting up the default html file. I read through the Github repo, looked at some examples, 
-                added materialize.css to help with styling, then I was up and running pretty quickly. I’m also using React’s inline 
-                styling, and JS based styling in some places rather than a separate CSS file.
-              </span>
+                added materialize.css to help with styling, then I was up and running pretty quickly. I spent more time getting the Webpack
+                File-loader working properly to get the _redirects file in the root directory during the build process than I did getting
+                Gatsby up and running.
+              </p>
             </div>
           </div>
         </div>
@@ -73,12 +75,12 @@ class Index extends Component {
         <div className="row">
           <div className="col s12">
             <div className="card-panel blue darken-1">
-              <span className="white-text"><strong>It's difficult to provide suggestions on the testing and job posting. </strong> 
+              <p className="white-text"><strong>It's difficult to provide suggestions on the testing and job posting. </strong> 
                 Particularly so because I’m still a bit in the dark about what the actual moment to moment work will be like. 
                 Based on that, the best advice I can give is to provide more information on what a day is like for a Support Engineer 
-                at Netlify. That would add context the information already given so that candidates will have a better feel for the job, 
-                and be better able to answer the questions asked.
-              </span>
+                at Netlify. That would add context to the information already given so that candidates will have a better feel for the job, 
+                and also be better able to answer the questions asked.
+              </p>
             </div>
           </div>
         </div>
@@ -104,17 +106,82 @@ class Index extends Component {
         <div className="row">
           <div className="col s12">
             <div className="card-panel blue darken-1">
-              <span className="white-text"><strong>It's difficult to provide suggestions on the testing and job posting. </strong> 
-                Particularly so because I’m still a bit in the dark about what the actual moment to moment work will be like. 
-                Based on that, the best advice I can give is to provide more information on what a day is like for a Support Engineer 
-                at Netlify. That would add context the information already given so that candidates will have a better feel for the job, 
-                and be better able to answer the questions asked.
-              </span>
+              <p className="white-text"><strong>SSL/HTTPS is important because security and privacy are important. </strong> 
+                People share a lot personal information online. From private details about their lives to payment information. 
+                I believe that they have a right to have their data secure. They also have a right to a certain level of privacy and 
+                security from malicious groups and in some cases, governments. It is good practice for sites and services to encrypt 
+                connections via SSL and use HTTPS to ensure there that data can be transferred securely across the internet.</p>
+                <p className="white-text">
+                I personally pushed for the company I currently work for to implement SSL everywhere, instead of only when logging in. 
+                This is because it also gives people peace of mind. It is more than just keeping your private information secure from 
+                hackers. This is particularly of importance in recent years with ISP’s selling web surfing data and logging user actions 
+                not just when surfing, but also the various IoT devices they are using on their neworks. More SSL and a greater emphasis 
+                on security and privacy is a good thing, and a net win for society as a whole, and the protection of individual liberties.
+        
+              </p>
+            </div>
+          </div>
+        </div>
+      {/* Explain, in a couple of paragraphs, what you think 2 major challenges around DNS configuration are for 
+          less-technical internet end-users */}
+        <div className="row">
+          <div className="col s12">
+            <div className="card-panel blue darken-1">
+              <p className="white-text"><strong>Two major challenges for non-tech savvy users configuring DNS are it's complexity,
+                and the the different setup options. </strong> The broad definition for DNS is simple to understand, but there are multiple 
+                ways and combinations to setup DNS for domain names, and services. “A” records for IP resolution, "CNAME" to point to another 
+                domain, "MX" for e-mail, "SRV" records, etc.  If you use your domain for Google Apps, or Microsoft’s 365 suite, you end up 
+                configuring so many things that if you aren’t trained in this technology, you’ll quickly be lost. DNS can be used not just 
+                for pointing a domain at an IP but to help with load balancing and other concepts that someone who is not tech-savvy will 
+                have a hard time understanding. </p>
+      
+                <p className="white-text">
+                An extension of this complexity is that there are also multiple ways of using DNS to achieve similar goals. For instance, 
+                you may setup "CNAME" to point your domain to another server that has a domain setup, or “A” records to point straight at 
+                your servers IP, the IP of your load balancer, etc., 301 redirect to send visitors to another URL, and so forth. These all 
+                use DNS to send people going to your domain to a particular server, but they each have slightly different use-cases. 
+                Because of the variety and complexity of DNS, in addition to the adjacent concepts and technologies related to using DNS, 
+                it can be hard for non-tech savvy users to get a handle on it.
+
+              </p>
+            </div>
+          </div>
+        </div>
+       {/* A customer writes in saying their “site won’t build”.  Compose your best short (2-paragraph) customer-facing answer without 
+           any additional data, that could be useful in the generic case but would also lead to a customer providing a more actionable 
+           response. */}
+        <div className="row">
+          <div className="col s12">
+            <div className="card-panel blue darken-1">
+              <p className="white-text"><strong>Thank you for contacting us. I’m Gerald and I’d be happy to assist you. </strong> 
+                Are you able to build the site on your own development machines? If so, please note that our build environments may be 
+                different from yours. We have an article that describes our build environment, and some debugging suggestions, along 
+                with instructions on how to setup your own docker container that is configured the same as ours. You can find this 
+                information at: <Link style={styles.link} to="https://www.netlify.com/blog/2016/10/18/how-our-build-bots-build-sites/">
+                https://www.netlify.com/blog/2016/10/18/how-our-build-bots-build-sites/</Link></p>
+
+                <p className="white-text">
+                We also provide build logs from the deploy tab of your app page. I certainly understand how frustrating this process can 
+                be; If you are still having trouble, feel free to reply to this e-mail with copies of your logs and we’ll go through them 
+                to find where the build is breaking. In either case we’ll follow up with you to see how things are coming along. If there
+                is anything else that we can assist you with, or if you have any other questions, please ask. Thanks again. </p>
+                
+                <p className="white-text">
+                Gerald O.
+
+              </p>
             </div>
           </div>
         </div>
       </div>
     );
+  }
+}
+
+const styles = {
+  link: {
+    color: "#f5f5f5",
+    textDecoration: "underline"
   }
 }
 
