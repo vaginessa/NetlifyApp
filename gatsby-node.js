@@ -3,12 +3,12 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 exports.modifyWebpackConfig = function(config, stage) {
   if(stage === 'build-html') {
-
-    config.plugin(CopyWebpackPlugin([
+    return cfg
+    config.plugin( new CopyWebpackPlugin([
           
             // {output}/file/without/extension
             {
-                from: '_redirects.re',
+                from: './_redirects.re',
                 to: 'public/',
                 toType: '_redirects'
             },
