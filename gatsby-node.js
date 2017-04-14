@@ -2,11 +2,9 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 var path = require('path');
 //var ExtractTextPlugin = require("extract-text-webpack-plugin")
 
-exports.modifyWebpackConfig = function(config, stage) {
-console.log(stage)
-  if(stage === 'build-html') {
+exports.postBuild = function(pages, callback) {
 
-    config.plugin( new CopyWebpackPlugin([
+    new CopyWebpackPlugin([
           
             // {output}/file/without/extension
             {
@@ -22,7 +20,6 @@ console.log(stage)
             // to `true` copies all files.
             copyUnmodified: true
         })
-    )
-  }
-  return config
+    
+  callback()
 }
