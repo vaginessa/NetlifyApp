@@ -3,10 +3,9 @@ var path = require('path');
 //var ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 exports.modifyWebpackConfig = function(config, stage) {
-
+console.log(stage)
   if(stage === 'build-html') {
-    
-    return cfg
+
     config.plugin( new CopyWebpackPlugin([
           
             // {output}/file/without/extension
