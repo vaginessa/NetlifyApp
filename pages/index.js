@@ -20,13 +20,25 @@ class Index extends Component {
           list: https://gist.github.com/fool/b0f254ff8c72a5765b6a9138249789d6 */}  
         <ul className="collection with-header">
           <li className="collection-header"><h4>My Top 5 Support Activities</h4></li>
-          <li className="collection-item">5. Respond to 60+ support requests via email or chat every day</li>
+          <li className="collection-item">5. Create video tutorials to help teach users a specific feature or use case</li>
           <li className="collection-item">4. Debug a customer's build using a programming language and framework that you've never seen before</li>
-          <li className="collection-item">3. Write and maintain documentation for our software and blog posts for our website.</li>
+          <li className="collection-item">3. Analyze thousands of support tickets to spot trends to improve our product</li>
           <li className="collection-item">2. Work with the development team to help design a new feature based on feedback from customers</li>
           <li className="collection-item">1. Work with people to figure out if Netlify's service can solve a particular workflow or integration challenge they have</li>
         </ul>
       {/* What is your favorite thing about providing technical support? */}      
+      {/* Rank your 5 favorite, and least favorite, activities from this 
+          list: https://gist.github.com/fool/b0f254ff8c72a5765b6a9138249789d6 */}  
+        <ul className="collection with-header">
+          <li className="collection-header"><h4>My Bottom 5 Support Activities</h4></li>
+          <li className="collection-item">5. Write and maintain documentation for our software and blog posts for our website.</li>
+          <li className="collection-item">4. Work with prospective customers to explain our service and the pricing model</li>
+          <li className="collection-item">3. Respond to 60+ support requests via email or chat every day</li>
+          <li className="collection-item">2. Submit bug reports and potentially bug fixes to closed and open source projects that Netlify maintains on GitHub</li>
+          <li className="collection-item">1. Receive occasional phone calls requesting support from our highest-value customers</li>
+        </ul>
+      {/* What is your favorite thing about providing technical support? */}      
+        <div className="row">
         <div className="row">
           <div className="col s12">
             <div className="card-panel blue darken-1">
